@@ -7,22 +7,28 @@ from pyrogram import filters
 load_dotenv()
 
 # Get this value from my.telegram.org/apps
-API_ID = int(getenv("API_ID"))
-API_HASH = getenv("API_HASH")
+API_ID = getenv("API_ID", "28928028")
+API_HASH = getenv("API_HASH", "b097202e877124392f4851d215fa8f3a")
 
-# Get your token from @BotFather on Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN")
+EVAL = list(map(int, getenv("EVAL", "0000000 0000000").split()))
+# ------------------------------------------------------
+BOT_TOKEN = getenv("BOT_TOKEN", "7552858898:AAEzIu4e-dAhjxCrg2Eq1T93uNhoUeaBSFI")
+# --------------------------------------------------------
+BOT_USERNAME = getenv("BOT_USERNAME" , "Fuyubot")
+# --------------------------------------------------------
 
-# Get your mongo url from cloud.mongodb.com
-MONGO_DB_URI = getenv("MONGO_DB_URI", None)
+#---------------------------------------------------------------
+#---------------------------------------------------------------
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://Lord_ichigo:Roshni@cluster0.ytuss.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DB_NAME = getenv("DB_NAME", "fuyu")
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 60))
 
 # Chat id of a group for logging bot's activities
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", None))
-
-# Get this value from @MissRose_Bot on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", None))
+LOGGER_ID = int(getenv("LOGGER_ID", -1002323856532))
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+OWNER_ID = int(getenv("OWNER_ID", 7678359785))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
@@ -31,20 +37,19 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 API_URL = getenv("API_URL", 'https://api.thequickearn.xyz') #youtube song url
-API_KEY = getenv("API_KEY", None) # youtube song api key, get it from https://t.me/RahulTC
+API_KEY = getenv("API_KEY", "30DxNexGenBots3898d2") # youtube song api key, get it from https://t.me/RahulTC
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/CyberPixelPro/AviaxMusic",
+    "https://github.com/DEV-ZTX/Fuyu",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/NexGenBots")
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/NexGenSpam")
-
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/Intro_Of_Mine")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/+Q1nKBQjbTVI2ZDI1")
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
 
@@ -84,21 +89,21 @@ confirmer = {}
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://graph.org//file/25115719697ed91ef5672.jpg"
+    "START_IMG_URL", "https://graph.org/file/299b085f6a9cdeab7689d-b3a6b28acb80c830b0.jpg"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://graph.org//file/389a372e8ae039320ca6c.png"
+    "PING_IMG_URL", "https://graph.org/file/af0b3ce0dd5eb51a531ed-eacf5c5972ceab2b7b.jpg"
 )
-PLAYLIST_IMG_URL = "https://graph.org//file/3dfcffd0c218ead96b102.png"
-STATS_IMG_URL = "https://graph.org//file/99a8a9c13bb01f9ac7d98.png"
-TELEGRAM_AUDIO_URL = "https://graph.org//file/2f7debf856695e0ef0607.png"
-TELEGRAM_VIDEO_URL = "https://graph.org//file/2f7debf856695e0ef0607.png"
-STREAM_IMG_URL = "https://te.legra.ph/file/bd995b032b6bd263e2cc9.jpg"
-SOUNCLOUD_IMG_URL = "https://te.legra.ph/file/bb0ff85f2dd44070ea519.jpg"
-YOUTUBE_IMG_URL = "https://graph.org//file/2f7debf856695e0ef0607.png"
-SPOTIFY_ARTIST_IMG_URL = "https://te.legra.ph/file/37d163a2f75e0d3b403d6.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://te.legra.ph/file/b35fd1dfca73b950b1b05.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://te.legra.ph/file/95b3ca7993bbfaf993dcb.jpg"
+PLAYLIST_IMG_URL = "https://graph.org/file/299b085f6a9cdeab7689d-b3a6b28acb80c830b0.jpg"
+STATS_IMG_URL = "https://graph.org/file/299b085f6a9cdeab7689d-b3a6b28acb80c830b0.jpg"
+TELEGRAM_AUDIO_URL = "https://graph.org/file/299b085f6a9cdeab7689d-b3a6b28acb80c830b0.jpg"
+TELEGRAM_VIDEO_URL = "https://graph.org/file/299b085f6a9cdeab7689d-b3a6b28acb80c830b0.jpg"
+STREAM_IMG_URL = "https://graph.org/file/299b085f6a9cdeab7689d-b3a6b28acb80c830b0.jpg"
+SOUNCLOUD_IMG_URL = "https://graph.org/file/299b085f6a9cdeab7689d-b3a6b28acb80c830b0.jpg"
+YOUTUBE_IMG_URL = "https://graph.org/file/299b085f6a9cdeab7689d-b3a6b28acb80c830b0.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://graph.org/file/299b085f6a9cdeab7689d-b3a6b28acb80c830b0.jpg"
+SPOTIFY_ALBUM_IMG_URL = "https://graph.org/file/299b085f6a9cdeab7689d-b3a6b28acb80c830b0.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://graph.org/file/299b085f6a9cdeab7689d-b3a6b28acb80c830b0.jpg"
 
 
 def time_to_seconds(time):
