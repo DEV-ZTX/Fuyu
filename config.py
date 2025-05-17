@@ -12,7 +12,7 @@ API_HASH = getenv("API_HASH", "b097202e877124392f4851d215fa8f3a")
 
 EVAL = list(map(int, getenv("EVAL", "0000000 0000000").split()))
 # ------------------------------------------------------
-BOT_TOKEN = getenv("BOT_TOKEN", "7552858898:AAEzIu4e-dAhjxCrg2Eq1T93uNhoUeaBSFI")
+BOT_TOKEN = getenv("BOT_TOKEN", "7552858898:AAEeGSYwdpW3-7Y6epKymON3li7zLizRRSE")
 # --------------------------------------------------------
 BOT_USERNAME = getenv("BOT_USERNAME" , "Fuyubot")
 # --------------------------------------------------------
